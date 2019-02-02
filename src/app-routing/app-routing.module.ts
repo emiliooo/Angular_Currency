@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'features', component: FeaturesComponent, canActivate: [AuthGuard] },
   { path: 'curriences', component: CurrenciesComponent, canActivate: [AuthGuard] },
-  { path: '**', component: PageNotFoundComponent, canActivate: [AuthGuard] }
+  { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
