@@ -6,7 +6,7 @@ import { UserService } from 'src/app/services/user.service';
   templateUrl: './currency-pln.component.html',
   styleUrls: ['./currency-pln.component.css']
 })
-export class CurrencyPlnComponent implements OnInit , AfterViewChecked {
+export class CurrencyPlnComponent implements OnInit  {
 
   @Input() Curren: string;
   currency: [];
