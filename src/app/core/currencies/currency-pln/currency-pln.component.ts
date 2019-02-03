@@ -9,13 +9,14 @@ import { UserService } from 'src/app/services/user.service';
 export class CurrencyPlnComponent implements OnInit  {
 
   @Input() Curren: string;
+  @Input() ViewName: string;
   currency: [];
 
   constructor(private userservice: UserService) { }
 
   
   ngOnInit() {
-    this.LoadCurency('BTCPLN');
+     this.LoadCurency(this.Curren);
   }
 
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -8,12 +8,15 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class CurrencyUsdComponent implements OnInit {
 
+  @Input() Curren: string;
+  @Input() ViewName: string;
   currency: [];
 
   constructor(private userservice: UserService) { }
 
+  
   ngOnInit() {
-    this.LoadCurency('BTCUSD');
+     this.LoadCurency(this.Curren);
   }
 
   LoadCurency(currenc) {

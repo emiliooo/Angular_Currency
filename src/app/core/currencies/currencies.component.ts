@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from 'src/app/services/user.service';
-
 
 @Component({
   selector: 'app-currencies',
@@ -9,18 +7,13 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class CurrenciesComponent implements OnInit {
 
-  currency: [];
+  listCurrency = ['BTCPLN', 'BTCUSD', 'LSKPLN' , 'LSKUSD'];
 
-  constructor(private userservice: UserService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.LoadCurency('BTCPLN');
   }
 
-  LoadCurency(currency) {
-    this.userservice.getCurrency(currency).subscribe(response => {
-      this.currency = response['bids'][0];
-    });
-  }
+
 
 }

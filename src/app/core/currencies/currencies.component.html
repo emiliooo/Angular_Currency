@@ -1,11 +1,10 @@
 <div class="container">
   <div class="row justify-content-center align-items-center" style="height:100vh">
-
     <ul class="list-group">
-      <app-currency-pln > </app-currency-pln>
-      <app-currency-usd > </app-currency-usd>
+      <app-currency-pln [Curren]="listCurrency[0]" [ViewName]="listCurrency[0]" > </app-currency-pln>
+      <app-currency-usd [Curren]="listCurrency[1]" [ViewName]="listCurrency[1]" > </app-currency-usd>
+      <app-currency-pln [Curren]="listCurrency[2]" [ViewName]="listCurrency[2]" > </app-currency-pln>
+      <app-currency-usd [Curren]="listCurrency[3]" [ViewName]="listCurrency[3]" > </app-currency-usd>
     </ul>
-
   </div>
-
 </div>
