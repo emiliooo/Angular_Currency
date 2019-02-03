@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from '../app/login/login.component';
-import { FeaturesComponent } from '../app/features/features.component';
-import { CurrenciesComponent } from 'src/app/currencies/currencies.component';
+
 import { PageNotFoundComponent } from 'src/app/core/page-not-found/page-not-found.component';
 import { AuthGuard } from 'src/app/guard/auth.guard';
+import { LoginComponent } from 'src/app/core/login/login.component';
+import { FeaturesComponent } from 'src/app/core/features/features.component';
+import { CurrenciesComponent } from 'src/app/core/currencies/currencies.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
